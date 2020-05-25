@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Python Linking
+{% endblock %}
+
+{% block body %}
+<br />
+<br />
+<a href="/helloWorld">Hello World</a>
+<br />
+<br />
+<a href="/hello">Hello</a>
+<br/>
+<br />
+<a href="/flipCoin">Flip Coin</a>
+<br />
+<br />
+<a href="/shuffle">Get Random Number</a>
+<br />
+<br />
+<br />
+<form action="/submit">
+    <input type="text" name="name" placeholder="Name"/>
+    <input type="submit" />
+</form>
+<br />
+<br />
+<h1>Todo List</h1>
+<ul>
+    {% for todo in todos %}
+        <li>{{ todo }}</li>
+    {% endfor %}
+</ul>
+<br />
+<a href="/add">Add New Task</a>
+{% endblock %}
